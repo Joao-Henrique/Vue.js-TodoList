@@ -1,4 +1,6 @@
-# vue-test-project
+# Vue.js TodoList
+
+This is a simple TodoList I have made to learn the basics of Vue.js.
 
 ## Project setup
 ```
