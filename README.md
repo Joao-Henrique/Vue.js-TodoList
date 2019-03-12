@@ -2,6 +2,10 @@
 
 This is a simple TodoList I have made to learn the basics of Vue.js.
 
+# Demo
+
+[Project Page](https://joao-henrique.github.io/Vue.js-TodoList/)
+
 ## Project setup
 ```
 npm install
