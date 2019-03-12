@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <div>
+      <span class="authorName"> Made by João Henrique</span>
+      <MainTitle :title="AppTitle"/>
+    </div>
     <div v-masonry transition-duration="1s" item-selector=".item">
       <div v-masonry-tile class="item" :key="index" v-for="(item, index) in listsArray">
         <List
@@ -23,6 +26,7 @@ import Vue from "vue";
 import { VueMasonryPlugin } from "vue-masonry";
 // Components
 import List from "./List.vue";
+import MainTitle from "./components/MainTitle.vue";
 import NewListButton from "./components/NewListButton.vue";
 // Use Masonry
 Vue.use(VueMasonryPlugin);
@@ -31,15 +35,22 @@ export default {
   name: "app",
   components: {
     List,
-    NewListButton
+    MainTitle,
+    NewListButton,
   },
   data: function() {
     return {
+      AppTitle: "Vue Todo List",
       listsArray: [
         {
-          title: "Groceries",
+          title: "Intructions",
           color: 1,
-          itemsArray: ["Pineaple", "Bananas", "Coffee"]
+          itemsArray: [
+            "Add or delete items from the list",
+            "Add new lists with the bottom-right add button",
+            "Use the color button on top-right of each list to change colors",
+            "Change title of lists using the edit button"
+          ]
         }
       ],
       newList: {
@@ -83,12 +94,20 @@ export default {
 </script>
 
 <style>
-#app {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: #2c3e50;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  margin-top: 60px;
-  text-align: center;
-}
+  body {
+    background-color: lightslategray;
+  }
+  #app {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #2c3e50;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    text-align: center;
+  }
+  .authorName {
+    color: lightgreen;
+    background-color: lightslategray;
+    display: flex;
+
+  }
 </style>
