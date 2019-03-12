@@ -105,8 +105,8 @@ export default {
     text-align: center;
   }
   .authorName {
-    color: lightgreen;
     background-color: lightslategray;
+    color: lightgreen;
     display: flex;
 
   }
