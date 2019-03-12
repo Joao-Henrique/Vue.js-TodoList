@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js",
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve"
   },
   "dependencies": {
     "vue": "^2.5.21",
@@ -34,6 +35,7 @@
       "parser": "babel-eslint"
     }
   },
+  "homepage": "git@github.com:joao-henrique/Vue.js-TodoList",
   "postcss": {
     "plugins": {
       "autoprefixer": {}

@@ -29,6 +29,7 @@ export default {
       if (this.newItem.length > 2) {
         this.$emit("submit", this.newItem);
         this.newItem = "";
+        this.$redrawVueMasonry();
       }
     },
     updateNewItem: function(value) {
